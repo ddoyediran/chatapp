@@ -40,7 +40,6 @@ const autoscroll = () => {
     }
 }
 
-
 socket.on('message', (message) => {
     console.log(message)
     const html = Mustache.render(messageTemplate, {
@@ -115,8 +114,6 @@ $locationButton.addEventListener('click', () => {
         })
     })
 })
-
-
 
 socket.emit('join', { username, room }, (error) => {
     if(error) {
